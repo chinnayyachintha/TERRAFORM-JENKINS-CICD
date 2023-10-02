@@ -1,13 +1,13 @@
 terraform {
   required_providers {
-    newrelic = {
-      source  = "newrelic/newrelic"
-      version = "~> 1.0.0"
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
     }
   }
-  required_version = ">= 1.2.0"
 }
 
+# Configure the AWS Provider
 provider "aws" {
-  region = var.aws_region
+  region = "us-east-1"
 }
